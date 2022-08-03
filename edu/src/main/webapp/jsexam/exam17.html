@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>아규먼트로 함수 전달하기</h1>
+<hr>
+<script src = "/edu/jsexam/util.js"></script>
+<script>
+	function output(p){
+		if(typeof p == 'function'){
+			p("ㅋㅋㅋ");
+		}else{
+			writeColor("ㅋㅋㅋ" + p, "h2", "#cc33ff");
+		}
+	}
+	output("둘리");
+	output(function(param){console.log(param)});
+	let myAlert = function(param){
+		alert(param);
+	}
+	output(myAlert);
+</script>
+</body>
+</html>
