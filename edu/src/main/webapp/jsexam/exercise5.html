@@ -12,32 +12,35 @@
 		for(var i = 0; i < arguments.length; i++){
 			if(typeof arguments[i] == "number"){
 				result += arguments[i];
-			}else if(!(typeof arguments[i] == "number")){
+			}else{
 				return "숫자만 전달하세요.";
 			}
 		}
 		return result;
 	}
-
-	if(typeof calc() == "number"){
-		writeColor(calc(), "h2", "red");
+	let result = calc();
+	if(typeof result == "number"){
+		writeColor(result, "h2", "red");
 	}else{
-		writeColor(cacl(), "h3", "blue");
+		writeColor(result, "h3", "blue");
 	}
-	if(typeof calc(10, 20, 30) == "number"){
-		writeColor(calc(10, 20, 30), "h2", "red");
+	result = calc(10, 20, 30)
+	if(typeof result == "number"){
+		writeColor(result, "h2", "red");
 	}else{
-		writeColor(calc(10, 20, 30), "h3", "blue");
+		writeColor(result, "h3", "blue");
 	}
-	if(typeof calc(10, '가나다', 20) == "number"){
-		writeColor(calc(10, '가나다', 20), "h2", "red");
+	result = calc(10, '가나다', 20)
+	if(typeof  result == "number"){
+		writeColor(result, "h2", "red");
 	}else{
-		writeColor(calc(10, '가나다', 20), "h3", "blue");
+		writeColor(result, "h3", "blue");
 	}
-	if(typeof calc(1,2,3,4,5) == "number"){
-		writeColor(calc(1,2,3,4,5), "h2", "red");
+	result = calc(1,2,3,4,5)
+	if(typeof result == "number"){
+		writeColor(result, "h2", "red");
 	}else{
-		writeColor(calc(1,2,3,4,5), "h3", "blue");
+		writeColor(result, "h3", "blue");
 	}
 </script>
 </body>
