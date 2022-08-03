@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>자바스크립트의 연산자(3)</h1>
+<hr>
+<h2>[자바스크립트의 조건연산자]</h2>
+<script>
+	var num = window.prompt("숫자를 입력하세요!");
+	if (num % 2 == 0){
+		document.write(num + " : 짝수");
+	}else{
+		document.write(num + " : 홀수");
+	}
+	document.write("<br>");
+	num % 2 == 0 && document.write(num + " : 짝수");
+	num % 2 == 0 || document.write(num + " : 홀수");
+</script>
+</body>
+</html>

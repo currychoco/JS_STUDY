@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	h1{
+		color : blue;
+		text-shadow : 2px 2px 2px black;
+	}
+	h2{
+		background-color : pink;
+	}
+</style>
+</head>
+<body>
+<h1>자바스크립트의 랜덤값 처리</h1>
+<hr>
+<script>
+	for(var i = 0; i < 10; i++){
+		var rand = Math.random(); // 0.0 <= rand < 1.0
+		console.log(rand);
+		console.log(rand * 6);
+		console.log(Math.floor(rand * 6));
+		console.log("-------------------");
+	}
+</script>
+<h2>브라우저의 개발자 도구의 자바스크립트 콘솔창에서 결과를 확인하시오</h2>
+</body>
+</html>

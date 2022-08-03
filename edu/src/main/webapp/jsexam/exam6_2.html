@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	h1, h3{
+		color : magenta;
+	}
+</style>
+</head>
+<body>
+<h1>자바스크립트의 제어문</h1>
+<hr>
+<h2>[자바스크립트의 while문]</h2>
+<script>
+	while(true){
+		var num = window.prompt("숫자를 입력하세요!"); //입력받은 정보를 string형으로 반환
+		if(isNaN(num) == true || num == "" || num == null){
+			document.write("<h3>숫자만을 입력하세요!<h3>");
+		}else{
+			document.write("<br>");
+			num % 2 == 0 && document.write(num + " : 짝수");
+			num % 2 == 0 || document.write(num + " : 홀수");
+		}
+		var result = window.confirm("계속 수행할까요?");
+		if(result == false){
+			break;
+		}
+	}
+</script>
+</body>
+</html>

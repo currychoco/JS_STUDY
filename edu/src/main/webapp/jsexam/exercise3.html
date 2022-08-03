@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	function sum(num){
+		if(num > 0){
+			var sum = 0;
+			for(var i = 1; i <= num; i++){
+				sum += i;
+			}
+			return sum;
+		}else if(num == 0){
+			return;
+		}
+	}
+	for(var i = 0; i < 5; i++){
+		var random = Math.random();
+		random = Math.floor(random * 6);
+		console.log(random);
+		if(typeof sum(random) == "number"){
+			document.write("<h2>호출 결과값 : " + sum(random) + "</h2>");
+		}else if(typeof sum(random) == "undefined"){
+			document.write("<h3>결과값이 없어요!!</h3>")
+		}
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>가변아규먼트 함수 정의와 활용1</h1>
+<hr>
+<script src = "util.js"></script>
+<script>
+	function sumAllData(){
+		let result = 0;
+		for(let i = 0; i < arguments.length; i++){
+			result += arguments[i];
+		}
+		return result;
+	}
+	writeNewLine(sumAllData(1,2,3,4,5,6,7,8,9,10))
+	writeNewLine(sumAllData(1,2,3))
+	writeNewLine(sumAllData(10,20,30,40,50,60,70))
+	writeNewLine(sumAllData())
+	writeNewLine(sumAllData(1))
+</script>
+</body>
+</html>

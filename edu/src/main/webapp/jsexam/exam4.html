@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>자바스크립트의 연산자(2)</h1>
+<hr>
+<h2>[자바스크립트의 사칙연산자]</h2>
+<ul>
+<script>
+	var v1 = 100;
+	document.write("<li>" + v1 + 5 + "</li>");//1005
+	document.write("<li>" + (v1 + 5) + "</li>");//105
+	document.write("<li>" + v1 - 5 + "</li>"); //NaN <- Not a Number
+	document.write("<li>" + (v1 - 5) + "</li>"); //95
+	document.write("<li>" + v1 * 5 + "</li>");//500
+	document.write("<li>" + v1 / 5 + "</li>");//20
+	document.write("<li>" + v1 % 5 + "</li>");//0
+</script>
+</ul>
+<hr>
+<ol>
+<script>
+	var v1 = "100";
+	document.write("<li>" + v1 + 5 + "</li>");//1005
+	document.write("<li>" + (v1 + 5) + "</li>");//105
+	document.write("<li>" + v1 - 5 + "</li>"); //NaN <- Not a Number
+	document.write("<li>" + (v1 - 5) + "</li>"); //95
+	document.write("<li>" + v1 * 5 + "</li>");//500
+	document.write("<li>" + v1 / 5 + "</li>");//20
+	document.write("<li>" + v1 % 5 + "</li>");//0
+</script>
+</ol>
+<ul>
+<hr>
+<script>
+	var v1 = "abc";
+	document.write("<li>" + v1 + 5 + "</li>");//1005
+	document.write("<li>" + (v1 + 5) + "</li>");//105
+	document.write("<li>" + v1 - 5 + "</li>"); //NaN <- Not a Number
+	document.write("<li>" + (v1 - 5) + "</li>"); //95
+	document.write("<li>" + v1 * 5 + "</li>");//500
+	document.write("<li>" + v1 / 5 + "</li>");//20
+	document.write("<li>" + v1 & 5 + "</li>");//0
+</script>
+</ul>
+</body>
+</html>

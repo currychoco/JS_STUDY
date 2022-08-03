@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>가변아규먼트 함수 정의와 활용2</h1>
+<hr>
+<script src = "util.js"></script>
+<script>
+	function allOut(){
+		writeColor(arguments.length, "h2", "green");
+		
+		for(let i = 0; i < arguments.length; i++){
+			console.log(arguments[i] + " : " + typeof arguments[i]);
+		}
+		console.log("----------------------")
+	}
+	allOut();
+	allOut(1, 2, 3);
+	allOut('가나다');
+	allOut(10, 20, 30, 40, true, 'abc');
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>함수 정의와 활용(2)-선언적인 함수</h1>
+<hr>
+<button onclick = "clickProcess(100)">숫자</button>
+<button onclick = "clickProcess('100')">문자열</button>
+<button onclick = "clickProcess(true)">논리값</button>
+<button onclick = "clickProcess(function(){})">함수</button>
+<button onclick = "clickProcess([])">배열</button>
+<button onclick = "clickProcess(new Date())">객체</button>
+<button onmouseover = "clickProcess()">???</button>
+
+<script>
+	function clickProcess(p){
+		if(typeof p == "number")
+			alert("매개변수 p에게 숫자가 전달됨");
+		else if(typeof p == "string")
+			alert("매개변수 p에게 문자열이 전달됨");
+		else if(typeof p == "boolean")
+			alert("매개변수 p에게 논리값이 전달됨");
+		else if(typeof p == "function")
+			alert("매개변수 p에게 함수가 전달됨");
+		else if(typeof "object")
+			alert("매개변수 p에게 객체가 전달됨");
+		else if(typeof p == "undefined")
+			alert("매개변수 p에게 전달된 아규먼트 없음");
+			
+			
+	}
+</script>
+</body>
+</html>

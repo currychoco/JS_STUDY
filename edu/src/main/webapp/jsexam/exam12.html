@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>함수 정의와 활용(2)-선언적인 함수 정의</h1>
+<hr>
+
+<h1>함수 정의와 활용(1)-선언적인 함수 정의</h1>
+<hr>
+<script>
+	function f1(){
+		document.write("f1() 호출<br>");
+		return "ㅋㅋㅋ";
+	}
+	function f2(p1, p2){
+		document.write("f2()-" + (p1 + p2) + "<br>");
+		return;
+	}
+	function f3(p){
+		document.write("<h3 style = 'color : red;'>" + p + "</h3>");
+	}
+	console.log(f1());
+	console.log(f2(10, 20));
+	console.log(f3("가나다"));
+	f1(10);
+	f2(10);
+	f2(100, 200, 300);
+	f3();
+</script>
+
+</body>
+</html>

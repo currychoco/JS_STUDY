@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	document.write("<ul>");
+	let a1 = [10, 'abc', true, 3.5];
+	document.write("<li>" + a1.length + "</li>");
+	document.write("<li>" + a1[0] + "</li>");
+	document.write("<li>" + a1[1] + "</li>");
+	document.write("<li>" + a1[2] + "</li>");
+	document.write("<li>" + a1[3] + "</li>");
+	document.write("<li>" + a1[4] + "</li>");
+	document.write("<li>" + typeof a1 + "</li>");
+	document.write("<li>" + typeof a1[0] + "</li>");
+	document.write("<li>" + typeof a1[1] + "</li>");
+	document.write("</ul>");
+	document.write("<hr>");
+	a1[4] = '가나다';
+	document.write("<h3>" + a1[4] + "</h3>");
+	document.write("<h3>" + a1.length + "</h3>");
+	for(let i = 0; i < a1.length; i++){
+		document.write("<h4>" + a1[i] + "</h4>");
+	}
+	for(let i in a1){
+		document.write("<h2>" + a1[i] + "</h2>");
+	}
+</script>
+</body>
+</html>

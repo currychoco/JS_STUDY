@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script src = "util.js"></script>
+<script>
+	function calc(){
+		var result = 0;
+		for(var i = 0; i < arguments.length; i++){
+			if(typeof arguments[i] == "number"){
+				result += arguments[i];
+			}else if(!(typeof arguments[i] == "number")){
+				return "숫자만 전달하세요.";
+			}
+		}
+		return result;
+	}
+
+	if(typeof calc() == "number"){
+		writeColor(calc(), "h2", "red");
+	}else{
+		writeColor(cacl(), "h3", "blue");
+	}
+	if(typeof calc(10, 20, 30) == "number"){
+		writeColor(calc(10, 20, 30), "h2", "red");
+	}else{
+		writeColor(calc(10, 20, 30), "h3", "blue");
+	}
+	if(typeof calc(10, '가나다', 20) == "number"){
+		writeColor(calc(10, '가나다', 20), "h2", "red");
+	}else{
+		writeColor(calc(10, '가나다', 20), "h3", "blue");
+	}
+	if(typeof calc(1,2,3,4,5) == "number"){
+		writeColor(calc(1,2,3,4,5), "h2", "red");
+	}else{
+		writeColor(calc(1,2,3,4,5), "h3", "blue");
+	}
+</script>
+</body>
+</html>

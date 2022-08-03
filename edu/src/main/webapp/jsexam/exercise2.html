@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 실습(2)</title>
+<style>
+	h1{
+		color : blue;
+	}
+	h2{
+		color : red;
+	}
+</style>
+</head>
+<body>
+<h1>자바스크립트 실습(2)</h1>
+<script>
+	let arr = [10, 5, 7, 21, 4, 8, 18];
+	
+	let sum = 0;
+	let min = arr[0];
+	let max = arr[0];
+	let countOfEven = 0;
+	let countOfOdd = 0;
+	
+	for(let i in arr) {
+		sum += arr[i];
+		if(arr[i] < min) {
+			min = arr[i];
+		}
+		if(arr[i] > max) {
+			max = arr[i];
+		}
+		if(arr[i]%2 == 0) {
+			countOfEven++;
+		}else{
+			countOfOdd++;
+		}
+	}
+	
+	document.write("<h2>모든 원소의 합 : " + sum + "</h2>");
+	document.write("<ul>");
+	document.write("<li>최대값 : " + max + "</li>");
+	document.write("<li>최소값 : " + min + "</li>");
+	document.write("<li>짝수의 갯수 : " + countOfEven + "</li>");
+	document.write("<li>홀수의 갯수 : " + countOfOdd + "</li>")
+	document.write("</ul>");
+</script>
+</body>
+</html>
