@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>자바스크립트 변수의 스코프(1)</h2>
+<hr>
+<script src = "util.js"></script>
+<script>
+	var i = 100;
+	var sum = 0;
+	writeColor("i : " + i, "h2", "red");
+	for(var i = 0; i < 10; i++){
+		sum += i;
+	}
+	writeColor("i : " + i, "h2", "blue");
+	writeColor("sum : " + sum, "h2", "green");
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	let num = Math.floor(Math.random() * 3 + 1);
+	switch (num) {
+	case 1:
+		if(confirm("다음으로 이동하시겠습니까?" + num)){
+			location.href = "https://www.daum.net/"
+		}
+		else{
+			location.href = "http://localhost:8080/edu/first.html"
+		}
+		break;
+	case 2:
+		if(confirm("네이버로 이동하시겠습니까?"+ num)){
+			location.href = "https://www.naver.com/"
+		}
+		else{
+			location.href = "http://localhost:8080/edu/first.html"
+		}
+		break;
+	case 3:
+		if(confirm("구글로 이동하시겠습니까?"+ num)){
+			location.href = "https://www.google.co.kr/"
+		}
+		else{
+			location.href = "http://localhost:8080/edu/first.html"
+		}
+		break;
+	default:
+		break;
+	}
+</script>
+</body>
+</html>

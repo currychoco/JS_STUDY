@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>자바스크립트의 객체 생성과 사용(객체 리터럴)</h1>
+<hr>
+<script src = "util.js"></script>
+<script>
+	let obj = {
+			name : "듀크",
+			eat : function(food){
+				writeColor(this.name + "가 " + food + "를 먹어요", "h3", "red");
+			}
+	}
+	obj.eat("바나나");
+	obj.eat("사과");
+	hr();
+	writeColor(typeof obj, "h2", "blue");
+	//(1) 객체가 만들어진 이후에 객체의 멤버를 추가/삭제 가능하다.
+	obj.project = "자바스크립트";
+	obj.study = function(){
+		writeColor(this.name + "가 " + this.project + "를 공부해요", "h3", "magenta");
+	}
+	obj.study();
+	hr();
+	write(obj.project, "h2");
+	write(obj["project"], "h2"); //멤버변수에 한해서 대괄호로도 가능
+	hr();
+	delete obj.study;
+	for(let pname in obj) //for(변수선언 : 대상객체(배열, 컬렉션객체))
+		write(pname + " : " + obj[pname], "h4"); 
+	//메서드 호출시에는 멤버연산자(.)를 통해서만 가능
+	
+</script>
+</body>
+</html>
