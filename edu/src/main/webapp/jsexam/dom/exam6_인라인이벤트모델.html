@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>DOM 프로그래밍(6)-인라인 이벤트 모델</h1>
+<hr>
+<button onclick = "updateColor('red');">빨간색</button>
+<button onclick = "updateColor('blue');">파란색</button>
+<button onclick = "updateColor('green');">초록색</button>
+<hr>
+<h2>오늘은 안 즐거운 금요일!!!</h2>
+<script>
+let dom = document.getElementsByTagName("h2")[0];
+	function updateColor(pcolor){
+		dom.style.color = pcolor;
+	}
+</script>
+</body>
+</html>

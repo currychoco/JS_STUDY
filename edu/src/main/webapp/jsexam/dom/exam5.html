@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>DOM 프로그래밍(5)</h1>
+<hr>
+<button onclick = "startTime();">시간을 알려주라옹...</button>
+<button onclick = "stopTime();">시간 출력을 졸료하라옹...</button>
+<hr>
+<div id = 'target'></div>
+<script>
+	let target = document.getElementById("target");
+	let setId;
+	function startTime(){
+		setId = window.setInterval(function() {
+			let d = new Date();
+			target.innerHTML = "<h3>" + d.toLocaleString() + "</h3>";
+		}, 1000);
+	}
+	function stopTime(){
+		window.clearInterval(setId);
+	}
+</script>
+</body>
+</html>

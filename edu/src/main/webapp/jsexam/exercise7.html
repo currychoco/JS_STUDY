@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	function printObject(p){
+		if(typeof p == "object"){
+			this.tag = p.tag;
+			this.color = p.color;
+			this. msg = p.msg;
+			document.write("<" + this.tag + " style = 'color : " + this.color + "'>" + this.msg + "</" + this.tag + ">");
+		}else{
+			return;
+		}
+	}
+	let p1 = {
+			tag : "h1",
+			color : "red",
+			msg : "첫번째 메세지입니다."
+	}
+	let p2 = {
+			tag : "h2",
+			color : "orange",
+			msg : "두번째 메세지입니다."
+	}
+	let p3 = {
+			tag : "h3",
+			color : "yellow",
+			msg : "세번쨰 메세지입니다."
+	}
+	let p4 = {
+			tag : "h4",
+			color : "green",
+			msg : "네번째 메세지입니다."
+	}
+	let p5 = {
+			tag : "h5",
+			color : "blue",
+			msg : "다섯번째 메세지입니다."
+	}
+	printObject(p1);
+	printObject(p2);
+	printObject(p3);
+	printObject(p4);
+	printObject(p5);
+</script>
+</body>
+</html>

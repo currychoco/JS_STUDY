@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>DOM 프로그래밍(7)-표준 이벤트 모델</h1>
+<hr>
+<button id = 'red'>빨간색</button>
+<button id = 'blue'>파란색</button>
+<button id = 'green'>초록색</button>
+<hr>
+<h2>오늘은 안 즐거운 금요일!!!</h2>
+<script>
+	let dom = document.getElementsByTagName("h2")[0];
+	let buttonTag = document.getElementsByTagName("button");
+	for(let i = 0; i < buttonTag.length; i++)
+		buttonTag[i].addEventListener("click", updateColor);
+	function updateColor(e){
+		//console.log(this.id);
+		//dom.style.color = this.id;
+		dom.style.color = e.target.id;
+	}
+</script>
+</body>
+</html>

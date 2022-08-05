@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>DOM 프로그래밍(4)</h1>
+<hr>
+<h2 onclick = "alert('인라인'); console.log('인라인')">인라인 이벤트 모델</h2>
+<h2>고전 이벤트 모델</h2>
+<h2>표준 이벤트 모델</h2>
+<script>
+	let doms = document.getElementsByTagName("h2");
+	doms[1].onlclick = function(){
+		alert('고전');
+		console.log('고전');
+	};
+	doms[2].addEventListener("click", function(){
+			alert('표준');
+			console.log('표준')
+	});
+</script>
+</body>
+</html>

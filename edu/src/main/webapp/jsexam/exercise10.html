@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>날씨와 이미지</h1>
+<button id = 'sun'>맑음</button>
+<button id = 'cloud'>흐림</button>
+<button id = 'cloud_sun'>맑고흐림</button>
+<button id = 'snow'>눈</button>
+<button id = 'rain'>비</button>
+<hr>
+<img src="" width="400">
+<script>	
+	let dom = document.getElementsByTagName("img")[0];
+	let buttonTag = document.getElementsByTagName("button");
+	for(let i = 0; i < buttonTag.length; i++){
+		buttonTag[i].addEventListener("click", updateImage);
+	}
+	function updateImage(e){
+		dom.src = "../images/" + e.target.id + ".png";
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>DOM 프로그래밍(3)</h1>
+<hr>
+<img src = "../../images/1.jpg" width = "200">
+<script>
+	function displayImage(){
+		let num = Math.floor(Math.random() * 10) + 1;
+		console.log(num);
+		let dom = document.getElementsByTagName("img")[0];
+		dom.src = "/edu/images/" + num + ".jpg";
+		dom.width = num * 30;
+	}
+	window.setInterval(displayImage, 3000);
+</script>
+</body>
+</html>

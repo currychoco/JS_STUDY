@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 id = "t1">DOM 프로그래밍(2)</h1>
+<h1 id = "t2">오늘은 금요일~~~</h1>
+<h2 id = "t3">날씨는 맑음</h2>
+<h2 id = "t4">오늘은 8월 5일</h2>
+<h2 id = "t5">점심으로 무엇을 먹을까?</h2>
+<hr>
+<script>
+	window.setTimeout(function(){
+		let t2dom = document.getElementById("t2");
+		t2dom.style.color = "red";
+		let t5dom = document.getElementById("t5");
+		t5dom.textContent += "짜장면";
+	}, 5000);
+</script>
+</body>
+</html>
