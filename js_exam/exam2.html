@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr = ["왕감자", "카레초코", "민병관", "매쉬드포테이토"];
+
+        var element=prompt("지울 이름은?","");
+        
+        var index = -1;
+        for(var i=0; i<arr.length; i++) {
+            if(arr[i] == element) {
+                index = i;
+                break;
+            }
+        }
+        var index = arr.indexOf(element);
+
+        if(index > -1) {
+            arr.splice(index, 1);
+        }
+        console.log("남은 엘리먼츠들")
+        console.log(arr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

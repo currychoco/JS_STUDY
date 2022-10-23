@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <style>
+    .grid-container {
+        display: grid;
+        column-gap: 10px;
+        row-gap: 50px;
+        grid-template-columns: auto auto auto auto;
+    }
+    header {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .page_form {
+        text-align: center;
+    }
+    .price {
+        color:red;
+    }
+    .sale-price {
+        color:blue;
+    }
+    .container {
+        text-align:center;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BOOK SEARCH</h1>
+        <div class="search_form">
+            <input type="text" id="keyword" />
+            <button onclick="searchData()">검색</button>
+        </div>
+    </header>
+    
+    <div class="grid-container container"></div>
+
+    <div class="page_form">
+        <button class="back_button" onclick="getDataBack()">back</button>
+        <button class="next_button" onclick="getDataNext()">next</button>
+    </div>
+    
+    <script src = "book.js"></script>
+    
+</body>
+</html>
