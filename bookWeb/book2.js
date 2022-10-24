@@ -58,11 +58,15 @@ function getData(){
             const publisher = e.publisher;
             const price = e.price;
             const salePrice = e.sale_price;
+
+            if(!thumbnail) {
+                thumbnail = "이미지준비중.JPG";
+            }
             
             $('.container').append(
                 `<div class="book">
                     <div>
-                        <a href="${url}"><img src="${thumbnail}" alt="이미지 없음"></a>
+                        <a href="${url}"><img src="${thumbnail}"></a>
                     </div>
                     <div>
                         <span>제목: ${title}</span><br>
