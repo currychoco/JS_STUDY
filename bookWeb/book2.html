@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <style>
+    .grid-container {
+        display: grid;
+        max-width: 1100px;
+        margin : 0 auto;
+        column-gap: 30px;
+        row-gap: 10px;
+        grid-template-columns: auto auto auto auto;
+    }
+
+    .book{
+        display:grid;
+        grid-template-rows: 2fr 1fr;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    header>h1{
+        font-family:Comic Sans MS, Comic Sans, cursive;
+        color: #00ccff;
+    }
+    input[type=text] {
+        border: 1px solid #00ccff;
+        border-radius: 4px;
+    }
+    button{
+        background-color: white;
+        color: #00ccff;
+        border: 1px solid #00ccff;
+        border-radius: 4px;
+    }
+    .page_form {
+        text-align: center;
+    }
+    .price {
+        color:red;
+    }
+    .sale-price {
+        color:blue;
+    }
+    .container {
+        text-align:center;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BOOK SEARCH</h1>
+        <div class="search_form">
+            <input type="text" id="keyword" />
+            <button onclick="searchData()">search</button>
+        </div>
+    </header>
+    
+    <div class="grid-container container"></div>
+
+    <div class="page_form">
+        <button class="back_button" onclick="getDataBack()">back</button>
+        <button class="next_button" onclick="getDataNext()">next</button>
+    </div>
+    
+    <script src = "book2.js"></script>
+    
+</body>
+</html>

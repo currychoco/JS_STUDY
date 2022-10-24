@@ -41,7 +41,7 @@ function getData(){
         data:{
             query:keyword,
             page:page,
-            size:10
+            size:12
         },
         headers:{
             Authorization:'KakaoAK 19b7c97ca15f8fca4ed406efef20d945'
@@ -58,11 +58,11 @@ function getData(){
             const publisher = e.publisher;
             const price = e.price;
             const salePrice = e.sale_price;
-    
+            
             $('.container').append(
-                `<div>
+                `<div class="book">
                     <div>
-                        <a href="${url}"><img src="${thumbnail}"></a>
+                        <a href="${url}"><img src="${thumbnail}" alt="이미지 없음"></a>
                     </div>
                     <div>
                         <span>제목: ${title}</span><br>
