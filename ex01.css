@@ -1,0 +1,12 @@
+*{
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+
+body{
+    display:grid;
+    height:100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
