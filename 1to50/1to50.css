@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #FFF7E9;
+    height: 100%;
+}
+
+.grid{
+    display: grid;
+    grid-template-rows: 2fr 4fr;
+    text-align: center;
+}
+
+h1{
+    color: #5F9DF7;
+    text-align: center;
+    margin-top: 80px;
+    font-size: 60px;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    border: solid 1px #aaa;
+}
+
+.box>p{
+    padding-top: 16px;
+    text-align: center;
+    margin:0 auto;
+    font-size: 40px;
+    color: #9C9EFE;;
+}
+
+.row{
+    display: flex;
+}
+
+.map{
+    margin: 0 auto;
+}
+
+.time{
+    font-size: 40px;
+    padding-top: 120px;
+    color: #aaa;
+}

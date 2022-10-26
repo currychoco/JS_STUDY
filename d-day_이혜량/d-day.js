@@ -4,16 +4,16 @@
 
 
 const time = document.body.querySelector('.time');
-// const printdate = document.body.querySelector('.dday');
 
 const form = document.body.querySelector('form');
 form.addEventListener('submit',e=>{
     e.preventDefault(); // 기본 동작 방지
     const content = document.body.querySelector('.dateContent').value;
-    const uDate = document.body.querySelector('.userDate').value;
+    const start = document.body.querySelector('.start').value;
+    const end = document.body.querySelector('.end').value;
 
     document.body.querySelector(".user-text").innerHTML = content;
-    document.body.querySelector(".dday").innerHTML = `D-${calcDday(uDate)}`;
+    document.body.querySelector(".dday").innerHTML = `D-${calcDday(start, end)}`;
 
     document.body.querySelector(".before-input").style.display = "none";
 
@@ -21,11 +21,10 @@ form.addEventListener('submit',e=>{
 
 });
 
-function calcDday(uDate){
-    const userDate = new Date(uDate);
-    const curDate = new Date();
-    
-    const sub = userDate - curDate;
+function calcDday(start, end){ 
+    const sday = new Date(start);
+    const eday = new Date(end); 
+    const sub = eday - sday;
     console.log(sub);
     const dday = Math.floor(sub / (1000*60*60*24));
     return dday;
@@ -36,6 +35,7 @@ function getTime(){
     let hours = String(date.getHours());
     let min = String(date.getMinutes());
     let sec = String(date.getSeconds());
+    let day = date.getDay();
 
     if(hours.length == 1){
         hours = '0'.concat(hours);
@@ -47,7 +47,17 @@ function getTime(){
         sec = '0'.concat(sec);
     }
 
-    time.innerHTML = `${hours}:${min}:${sec}`;
+    switch(day){
+        case 0: day = '일'; break;
+        case 1: day = '월'; break;
+        case 2: day = '화'; break;
+        case 3: day = '수'; break;
+        case 4: day = '목'; break;
+        case 5: day = '금'; break;
+        case 6: day = '토'; break;
+    }
+
+    time.innerHTML = `${hours}:${min}:${sec}(${day})`;
 }
 
 getTime();
