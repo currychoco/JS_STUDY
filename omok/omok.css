@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Nanum+Gothic+Coding&display=swap');
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    background-color: #b6851d1e;
+}
+
+.grid{
+    display : grid;
+    grid-template-rows: 2fr 1fr 8fr;
+    text-align: center;
+}
+
+h1{
+    font-family: 'Dongle', sans-serif;
+    margin-top: 40px;
+    font-size: 60px;
+}
+
+.turn{
+    font-family: 'Nanum Gothic Coding', monospace;
+}
+
+.map{
+    margin: 0 auto;
+}
+
+.box{
+    width: 60px;
+    height: 60px;
+    border: solid 1px black;
+    background-color: #b6861d88;
+}
+
+.mark{
+    text-align: center;
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+.row{
+    display: flex;
+}

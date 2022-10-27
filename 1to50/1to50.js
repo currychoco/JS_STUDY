@@ -24,7 +24,7 @@ console.log(back);
 let cnt = 1;
 // set map
 for(let i = 0; i < SIZE; i++){
-    const row = [];
+    //const row = [];
     const mapRow = document.createElement('div');
     mapRow.setAttribute('class', 'row');
 
